@@ -20,7 +20,11 @@ namespace DiscordBot
 
         public async Task StartAsync()
         {
-            if (string.IsNullOrEmpty(Config.Bot.Token)) return;
+            if (string.IsNullOrEmpty(Config.Bot.Token))
+            {
+                Console.WriteLine("Fill config with Token and cmdPrefix");
+                return;
+            }
 
             _client = new DiscordSocketClient(new DiscordSocketConfig
             {
