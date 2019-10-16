@@ -5,7 +5,6 @@ C:\Users\mat_e\source\repos\DiscordBot\bin\Debug\DiscordBot.pdb
 C:\Users\mat_e\source\repos\DiscordBot\bin\Debug\Newtonsoft.Json.dll
 C:\Users\mat_e\source\repos\DiscordBot\bin\Debug\Newtonsoft.Json.xml
 C:\Users\mat_e\source\repos\DiscordBot\obj\Debug\DiscordBot.csprojAssemblyReference.cache
-C:\Users\mat_e\source\repos\DiscordBot\obj\Debug\DiscordBot.csproj.CoreCompileInputs.cache
 C:\Users\mat_e\source\repos\DiscordBot\obj\Debug\DiscordBot.csproj.CopyComplete
 C:\Users\mat_e\source\repos\DiscordBot\obj\Debug\DiscordBot.exe
 C:\Users\mat_e\source\repos\DiscordBot\obj\Debug\DiscordBot.pdb

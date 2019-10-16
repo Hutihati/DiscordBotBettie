@@ -10,19 +10,22 @@ namespace DiscordBot
 {
     class Utilities
     {
-        private static readonly Dictionary<string, string> alerts;
+        private static readonly Dictionary<string, string> Alerts;
         static Utilities()
         {
-            string json = File.ReadAllText("SystemLang/alerts.json");
+            var json = File.ReadAllText("SystemLang/alerts.json");
             var data = JsonConvert.DeserializeObject<dynamic>(json);
 
-            alerts = data.ToObject<Dictionary<string, string>>();
+            Alerts = data.ToObject<Dictionary<string, string>>();
         }
 
         public static string GetAlert(string key)
         {
-            if (alerts.ContainsKey(key)) return alerts[key];
-            return " ";
+            return Alerts.ContainsKey(key) ? Alerts[key] : "";
+        }
+        public static string GetAlert(string key, params object[] parameter)
+        {
+            return Alerts.ContainsKey(key) ? string.Format(Alerts[key], parameter) : "";
         }
     }
 }

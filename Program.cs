@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Discord;
 
@@ -10,15 +12,15 @@ namespace DiscordBot
 {
     class Program
     {
-        DiscordSocketClient _client;
-        CommandHandler _handler;
+        private DiscordSocketClient _client;
+        private CommandHandler _handler;
 
         private static void Main(string[] args)
         => new Program().StartAsync().GetAwaiter().GetResult();
 
         public async Task StartAsync()
         {
-            if (Config.bot.token == "" || Config.bot.token == null) return;
+            if (string.IsNullOrEmpty(Config.Bot.Token)) return;
 
             _client = new DiscordSocketClient(new DiscordSocketConfig
             {
@@ -26,10 +28,10 @@ namespace DiscordBot
             });
 
             _client.Log += Log;
-            await _client.LoginAsync(TokenType.Bot, Config.bot.token);
+            await _client.LoginAsync(TokenType.Bot, Config.Bot.Token);
             await _client.StartAsync();
             _handler = new CommandHandler();
-            await _handler.InitializeAsunc(_client);
+            await _handler.InitializeAsync(_client);
             await Task.Delay(-1);
         }
 

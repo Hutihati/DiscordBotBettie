@@ -1,3 +1,8 @@
 {
-    "TEST" : "Hello World"
+  "ECHO": "Echoed message below :smile:",
+  "WELCOME_&USER_&BOT": "Hello , {0}. My name is {1}! How may i help you?",
+  "&NAME_ROLL": "{0} rolled:",
+  "&MESSAGE_CHOSEN": "From {0} chose:",
+  "SECRET": "The secret is: `-SECRET-`",
+  "NOT_FOUND" :  "{0} was not found" 
 }
